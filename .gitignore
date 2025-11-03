@@ -1,0 +1,53 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ---- Virtual Environment ----
+.venv/
+venv/
+env/
+ENV/
+
+# ---- Environment Variables ----
+.env
+*.env
+
+# ---- IDE / Editor files ----
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---- Unit test / Coverage ----
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+coverage.xml
+
+# ---- Logs ----
+*.log
+
+# ---- Mac / Windows OS files ----
+.DS_Store
+Thumbs.db
+
+# ---- Build / Distribution ----
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ---- Azure Pipelines ----
+# Azure DevOps automatically handles pipeline logs and artifacts
+*.runsettings
+*.trx
+TestResults/
+
+# ---- Misc ----
+*.bak
+*.tmp
