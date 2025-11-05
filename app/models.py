@@ -1,18 +1,17 @@
-# app/models.py
+# models.py
+from collections import defaultdict
 
-weekly_store = {}
+# Stores meals by day
+weekly_store = defaultdict(list)
 
 def add_meal(day, name, calories):
-    if day not in weekly_store:
-        weekly_store[day] = []
-    meal = {"day": day,"name": name, "calories": calories}
-    weekly_store[day].append(meal)
-    return meal
-
-def get_day_total(day):
-    if day not in weekly_store:
-        return 0
-    return sum(meal["calories"] for meal in weekly_store[day])
+    """Add a meal to the weekly store."""
+    weekly_store[day].append({"name": name, "calories": calories})
 
 def get_week_total():
-    return sum(get_day_total(day) for day in weekly_store)
+    """Calculate total calories for the week."""
+    total = 0
+    for meals in weekly_store.values():
+        for meal in meals:
+            total += meal["calories"]
+    return total

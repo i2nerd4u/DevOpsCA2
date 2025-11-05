@@ -5,26 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calorie Counter</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
     <header class="header">
-        <h1 class="logo" style="text-decoration: none; color: inherit; font-size: 1.5rem; font-weight: bold;">Calorie counter</a>
-        </div>
+        <h1 class="logo" style="text-decoration: none; color: inherit; font-size: 1.5rem; font-weight: bold;">Calorie Counter</h1>
     </header>
 
     <main class="main-content">
         <h1>Calorie Tracker</h1>
         <p>Record your meals and track your calorie intake</p>
-        
+
         <div class="planner-container">
             <div id="weeklyPlanner">
-                <h1>Your Current Calories for this week: </h1>
+                <h2>Your Current Calories for this week: {{ week_total }}</h2>
+
+                <!-- Form to add meal -->
+                <form method="POST">
+                    <label>Meal:</label>
+                    <input type="text" name="name" placeholder="e.g. Salad" required>
+                    <label>Calories:</label>
+                    <input type="number" name="calories" placeholder="e.g. 200" required>
+                    <button type="submit">Add Meal</button>
+                </form>
+                <!-- Display meals -->
+                <h3>Meals Added:</h3>       
                 
             </div>
         </div>
-        
+
     </main>
-    
 </body>
 </html>
