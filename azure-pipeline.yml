@@ -21,7 +21,7 @@ steps:
     pip install pytest coverage pylint
   displayName: 'Install dependencies'
 
-# Run tests and enforce 80% coverage
+# Run tests and enforce 95% coverage
 - script: |
     export PYTHONPATH=$(System.DefaultWorkingDirectory)
     coverage run -m pytest

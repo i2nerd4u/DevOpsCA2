@@ -4,7 +4,7 @@ from calorie_counter.calculator import CalorieCounter
 if __name__ == "__main__":
     counter = CalorieCounter()
     while True:
-        choice = input("Please choose from one of the follwing options:\n1. Add food  2. View total  3. Reset  4. Exit: ")
+        choice = input("1. Add food  2. View total  3. Reset  4. Exit: ")
         if choice == "1":
             food = input("Enter food name: ")
             cal = int(input("Enter calories: "))
