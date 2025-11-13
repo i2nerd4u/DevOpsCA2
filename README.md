@@ -34,6 +34,9 @@ Clear all entered meals and reset the calorie count for the day
 Exit:
 Exit the application
 
+![CalorieCounterScreenshot](images/CalorieCounterScreenshot.png)
+
+
 ## CI Pipeline Implementation
 The azure pipeline is configured using the azure-pipeline.yml file
 The pipeline includes:
@@ -56,6 +59,8 @@ Branch Protection Rules:
         - The pipeline is defined in azure-pipelines.yml must pass before merging
         - Strict enforcement that PR cannot merge unless status checks pass.
 - Enforced code review and meaningful commit messages
+![Screenshot of Application1](images/BranchProtectionScreenshot.png)
+
 
 ## Testing Strategy
 Unit testing:
@@ -71,6 +76,8 @@ Static analysis:
 Pipeline Integration:
 - Unit tests and static analysis are automatically triggered on dev and main branches.
 - PR's cannot be merged unless the pipeline passes all of the tests and status checks
+![Testing Screenshot](images/TestingScreenshot.png)
+
 
 ## Troubleshooting Guide
 Pylint not recognized:
