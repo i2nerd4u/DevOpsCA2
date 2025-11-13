@@ -25,7 +25,7 @@ steps:
 - script: |
     export PYTHONPATH=$(System.DefaultWorkingDirectory)
     coverage run -m pytest
-    coverage report --fail-under=80
+    coverage report --fail-under=95
     coverage xml
   displayName: 'Run tests with coverage'
 
