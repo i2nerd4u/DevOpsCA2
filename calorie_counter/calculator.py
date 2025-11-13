@@ -1,20 +1,21 @@
-"""This module contains the CalorieCounter class for tracking daily calories."""
+"""Module for tracking food and daily calorie intake."""
 class CalorieCounter:
-    """Handles calorie counting for the day."""
-
+    """Class to track daily calorie intake."""
     def __init__(self):
-        self.total = 0
-        self.food_log = []
+        """Initialize with empty meal list."""
+        self.meals = []
 
-    def add_food(self, food: str, calories: int):
-        """Add calories for a food item."""
-        self.food_log.append((food, calories))
-        self.total += calories
+    def add_food(self, food, calories):
+        """Add a meal with calories"""
+        self.meals.append({"food": food, "calories": calories})
 
     def total_calories(self):
         """Return total calories for the day."""
-        return self.total
+        return sum(meal["calories"] for meal in self.meals)
+    def list_meals(self):
+        """Return a list of all meals"""
+        return self.meals
 
     def reset_day(self):
         """Reset total calories for a new day."""
-        self.total = 0
+        self.meals = []

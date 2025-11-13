@@ -21,11 +21,11 @@ steps:
     pip install pytest coverage pylint
   displayName: 'Install dependencies'
 
-# Run tests and enforce 80% coverage
+# Run tests and enforce 95% coverage
 - script: |
     export PYTHONPATH=$(System.DefaultWorkingDirectory)
     coverage run -m pytest
-    coverage report --fail-under=80
+    coverage report --fail-under=95
     coverage xml
   displayName: 'Run tests with coverage'
 
@@ -39,5 +39,5 @@ steps:
 
 # Run static code analysis
 - script: |
-    pylint calorie_counter
+    python -m pylint calorie_counter
   displayName: 'Run static analysis'
