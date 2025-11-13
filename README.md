@@ -34,7 +34,9 @@ Clear all entered meals and reset the calorie count for the day
 Exit:
 Exit the application
 
-![CalorieCounterScreenshot](images/CalorieCounterScreenshot.png)
+
+![CalorieCounterScreenshot](images/CalorieCounterScreenshot1.png)
+
 
 
 ## CI Pipeline Implementation
@@ -45,6 +47,8 @@ The pipeline includes:
 - Automatically generates code coverage reports (XML and console) which enforces a minimum of 95% coverage
 - Runs static code analysis using Pylint
 - Publishes coverage results to Azure Dev Ops pipeline.
+
+![Screenshot of Azure](images/AzureScreenshot1.png)
 ## Branch Policies and Protection
 Branches:
 - main
