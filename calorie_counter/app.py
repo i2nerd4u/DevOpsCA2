@@ -10,6 +10,9 @@ if __name__ == "__main__":
             cal = int(input("Enter calories: "))
             counter.add_food(food, cal)
         elif choice == "2":
+            print("\nMeals Today:")
+            for meals in counter.list_meals():
+                print(f"- {meals['food']}: {meals['calories']} calories")
             print(f"Total calories: {counter.total_calories()}")
         elif choice == "3":
             counter.reset_day()
