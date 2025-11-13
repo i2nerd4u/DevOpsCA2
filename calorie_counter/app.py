@@ -1,4 +1,5 @@
-from calculator import CalorieCounter
+"""CLI application for entering food items and tracking daily calories."""
+from calorie_counter.calculator import CalorieCounter
 
 if __name__ == "__main__":
     counter = CalorieCounter()

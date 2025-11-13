@@ -1,14 +1,20 @@
+"""This module contains the CalorieCounter class for tracking daily calories."""
 class CalorieCounter:
-    def __init__(self):
-        self.entries = []
+    """Handles calorie counting for the day."""
 
-    def add_food(self, food_name, calories):
-        if calories < 0:
-            raise ValueError("Calories cannot be negative.")
-        self.entries.append({"food": food_name, "calories": calories})
+    def __init__(self):
+        self.total = 0
+        self.food_log = []
+
+    def add_food(self, food: str, calories: int):
+        """Add calories for a food item."""
+        self.food_log.append((food, calories))
+        self.total += calories
 
     def total_calories(self):
-        return sum(item["calories"] for item in self.entries)
+        """Return total calories for the day."""
+        return self.total
 
     def reset_day(self):
-        self.entries = []
+        """Reset total calories for a new day."""
+        self.total = 0
