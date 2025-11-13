@@ -39,5 +39,5 @@ steps:
 
 # Run static code analysis
 - script: |
-    pylint calorie_counter
+    python -m pylint calorie_counter
   displayName: 'Run static analysis'
