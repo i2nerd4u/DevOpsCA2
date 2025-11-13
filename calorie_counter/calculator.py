@@ -1,6 +1,8 @@
+"""Module for tracking food and daily calorie intake."""
 class CalorieCounter:
     """Class to track daily calorie intake."""
     def __init__(self):
+        """Initialize with empty meal list."""
         self.meals = []
 
     def add_food(self, food, calories):
@@ -10,7 +12,6 @@ class CalorieCounter:
     def total_calories(self):
         """Return total calories for the day."""
         return sum(meal["calories"] for meal in self.meals)
-    
     def list_meals(self):
         """Return a list of all meals"""
         return self.meals
