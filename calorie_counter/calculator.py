@@ -14,7 +14,7 @@ class CalorieCounter:
     def total_calories(self):
         """Return total calories for the day."""
         return sum(meal["calories"] for meal in self.meals)
-    
+
     def list_meals(self):
         """Return a list of all meals"""
         return self.meals
