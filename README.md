@@ -13,7 +13,7 @@ Clone the local Directory:
 
 Create a virutal Environment:
 1- python -m venv .venv
-2- source .venv/bin/activate
+2- .\.venv\Scripts\Activate  
 
 Install the required packages:
 1- pip install -r requirements.txt
