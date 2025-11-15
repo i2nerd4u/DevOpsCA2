@@ -65,6 +65,8 @@ Branch Protection Rules:
         - Strict enforcement that PR cannot merge unless status checks pass.
 - Enforced code review and meaningful commit messages
 ![Screenshot of Application1](images/BranchProtectionScreenshot.png)
+![Screenshot of Application2](images.BranchProtectionScreenshot2.png)
+
 
 
 ## Testing Strategy
